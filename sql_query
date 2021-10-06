@@ -1,0 +1,13 @@
+SELECT 
+    recclass, AVG(mass) AS srednia_masa
+FROM
+    MeteoriteLandings
+GROUP BY recclass;
+
+
+SELECT 
+    recclass, AVG(mass) AS srednia_masa
+FROM
+    MeteoriteLandings
+GROUP BY recclass
+HAVING srednia_masa < 5000;
