@@ -3,3 +3,13 @@ import ssl
 ssl._create_default_https_context = ssl._create_unverified_context
 data = pd.read_json("https://data.nasa.gov/resource/gh4g-9sfh.json")
 data.to_csv('MeteoriteLandings', index=False)
+
+#improved
+import pandas as pd
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
+data = pd.read_json("https://data.nasa.gov/resource/gh4g-9sfh.json")
+data['year'] = data['year'].str.split('-',1,expand = True).drop(columns = 1)
+data.rename(columns={'reclat':'latitude','reclong':'longitude'}, inplace=True)
+data.drop(columns = 'geolocation', inplace=True)
+data.to_csv('MeteoriteLandings', index=False)
