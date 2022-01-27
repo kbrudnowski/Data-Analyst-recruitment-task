@@ -15,3 +15,7 @@ Here is what to do with it:
   - Your own visualisation that you think best captures the sense of the above dataset.
 
 Good luck!
+
+
+Here's my final dashboard (in polish):
+https://datastudio.google.com/reporting/6778e9f8-76c6-4ef7-b37c-6b4a9b0f74f2
